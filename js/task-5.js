@@ -20,5 +20,5 @@ function handleClick() {
 const linkEl = document.createElement('link');
 linkEl.rel = 'stylesheet';
 linkEl.href =
-  'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap';
-document.head.appendChild(linkEl);
+  'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap';
+document.head.append(linkEl);

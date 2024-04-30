@@ -10,6 +10,7 @@ const destroyBtn = document.querySelector('button[data-destroy]');
 const boxesEl = document.querySelector('#boxes');
 
 function createBoxes(amount) {
+  boxesEl.classList.add('is-visible');
   boxesEl.innerHTML = '';
   let size = 0;
 
@@ -37,6 +38,7 @@ function handleCreate(event) {
 
 function destroyBoxes(event) {
   boxesEl.innerHTML = "";
+  boxesEl.classList.remove('is-visible');
 }
 
 
@@ -45,5 +47,5 @@ function destroyBoxes(event) {
 const linkEl = document.createElement('link');
 linkEl.rel = 'stylesheet';
 linkEl.href =
-  'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap';
-document.head.appendChild(linkEl);
+  'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap';
+document.head.append(linkEl);
