@@ -91,6 +91,10 @@ h2 {
   border: 1px solid #808080;
 }
 
+#name-input:hover {
+  border: 1px solid #000000;
+}
+
 #name-input::placeholder {
   color: #2e2f42;
   font-family: 'Montserrat';
@@ -137,6 +141,10 @@ h1 {
   padding-left: 16px;
 }
 
+.login-form > label > input:hover {
+  border: 1px solid #000000;
+}
+
 .login-form > button {
   margin-top: 8px;
 
@@ -160,6 +168,11 @@ h1 {
   border: none;
 }
 
+.login-form > button:hover {
+  background: #6c8cff;
+  cursor: pointer;
+}
+
 /* task 5 */
 
 .widget {
@@ -171,17 +184,10 @@ h1 {
 }
 
 .change-color {
-  /* display: flex; */
   padding: 8px 16px;
-  /* justify-content: center;
-  align-items: center;
-  gap: 10px; */
-
   border-radius: 8px;
   background: #4e75ff;
   border: none;
-  /* width: 148px;
-  height: 40px; */
 
   color: #fff;
   font-family: Montserrat;
@@ -191,7 +197,12 @@ h1 {
   letter-spacing: 0.04em;
 }
 
-/* task 5 */
+.change-color:hover {
+  background: #6c8cff;
+  cursor: pointer;
+}
+
+/* task 6 */
 
 #controls {
   justify-content: center;
@@ -233,6 +244,10 @@ h1 {
   text-align: center;
 }
 
+#controls > input:hover {
+  border: 1px solid #000000;
+}
+
 #controls > button {
   color: #fff;
   font-family: Montserrat;
@@ -250,6 +265,16 @@ h1 {
   background: #4e75ff;
 }
 
+#controls > button[data-create]:hover {
+  background: #6c8cff;
+  cursor: pointer;
+}
+
 #controls > button[data-destroy] {
   background: #ff4e4e;
+}
+
+#controls > button[data-destroy]:hover {
+  background: #ff7070;
+  cursor: pointer;
 }
