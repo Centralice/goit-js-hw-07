@@ -9,12 +9,14 @@ const createBtn = document.querySelector('button[data-create]');
 const destroyBtn = document.querySelector('button[data-destroy]');
 const boxesEl = document.querySelector('#boxes');
 
-const allBoxes = [];
+
 
 function createBoxes(amount) {
   boxesEl.classList.add('is-visible');
   boxesEl.innerHTML = '';
   let size = 30;
+
+  const allBoxes = [];
 
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
