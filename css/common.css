@@ -30,7 +30,7 @@ ul {
   margin-bottom: 24px;
 }
 
-h2 {
+.item > h2 {
   color: #2e2f42;
   font-size: 24px;
   font-weight: 600;

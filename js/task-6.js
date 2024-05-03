@@ -9,10 +9,12 @@ const createBtn = document.querySelector('button[data-create]');
 const destroyBtn = document.querySelector('button[data-destroy]');
 const boxesEl = document.querySelector('#boxes');
 
+const allBoxes = [];
+
 function createBoxes(amount) {
   boxesEl.classList.add('is-visible');
   boxesEl.innerHTML = '';
-  let size = 0;
+  let size = 30;
 
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
@@ -20,8 +22,9 @@ function createBoxes(amount) {
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxesEl.append(box);
+    allBoxes.push(box);
   }
+  boxesEl.append(...allBoxes);
 }
 
 createBtn.addEventListener('click', handleCreate);
@@ -30,17 +33,17 @@ destroyBtn.addEventListener('click', destroyBoxes);
 function handleCreate(event) {
   const amount = inputEl.value;
 
-  if (inputEl.value >= 1 && inputEl.value <=100) {
+  if (inputEl.value >= 1 && inputEl.value <= 100) {
     createBoxes(amount);
     inputEl.value = '';
   }
 }
 
 function destroyBoxes(event) {
-  boxesEl.innerHTML = "";
+  boxesEl.innerHTML = '';
+  inputEl.value = '';
   boxesEl.classList.remove('is-visible');
 }
-
 
 // fonts
 
